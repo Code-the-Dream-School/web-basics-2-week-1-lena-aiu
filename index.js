@@ -39,7 +39,7 @@ console.log('hello world')
 
 var firstName = "Elena";
 var lastName = "Aiupova";
-console.log(firstName, ' ', lastName)
+console.log(firstName + " " + lastName);
 
 /* Challenge #3
  * Calculate the total price rounded to two decimals
@@ -58,7 +58,7 @@ console.log(firstName, ' ', lastName)
 var price = parseFloat("9.98");
 var quantity = 5;
 var total = price * quantity;
-console.log(total.toFixed(2))
+console.log('$' + total.toFixed(2));
 
 /* Challenge #4
  * Declare a variable and conditionally assign it a value
@@ -76,16 +76,14 @@ console.log(total.toFixed(2))
 
 // TODO: ADD CODE HERE
 
-	var weather = "Rainy";
-	var message;
-	if (weather === "Sunny"){
-		var message = "Yay! It's sunny outside";
-	} else { 
-		var message = "Aww! It's not sunny outside";
-		console.log(message);
-	}
-
-
+var weather = "Rainy";
+var message;
+if (weather === "Sunny"){
+	message = "Yay! It's sunny outside";
+} else { 
+	message = "Aww! It's not sunny outside";
+}
+	console.log(message);
 
 /* Challenge #5
  * Create a function that returns any string
@@ -100,11 +98,12 @@ console.log(total.toFixed(2))
 
 // TODO: ADD CODE HERE
 
-myFunction = function() {
+function myFunction() {
 	var string = "I called a function!";
 	return string;
 }
 console.log(myFunction());
+
 
 /* Challenge #6
  * Rewrite the function in Challenge #5 as an arrow function
@@ -119,7 +118,9 @@ console.log(myFunction());
 
 // TODO: ADD CODE HERE
 
-var myArrowFunction = string => { return "I called an arrow function"; };
+var myArrowFunction = string => { 
+	return "I called an arrow function"; 
+};
 console.log(myArrowFunction());
 
 /* Challenge #7
@@ -136,11 +137,13 @@ console.log(myArrowFunction());
 
 // TODO: ADD CODE HERE
 
-stringToUpper = function(str) {
-	var str = "why am i screaming";
-	return str = str.toUpperCase();
+var str = "why am i screaming";
+function stringToUpper () {
+	return str.toUpperCase();
 }
-console.log(stringToUpper());
+console.log(stringToUpper(str));
+	
+
 
 /* Challenge #8
  * Create a function that accepts a number argument and returns double its value
@@ -159,11 +162,11 @@ console.log(stringToUpper());
 
 // TODO: ADD CODE HERE
 
-multiplyByTwo = function(number) {
+function multiplyByTwo(number) {
 	return number * 2;
 }
-	var num1 = multiplyByTwo(1);
-	var num2 = multiplyByTwo(5);
-	var num3 = multiplyByTwo(10);
+var num1 = multiplyByTwo(1);
+var num2 = multiplyByTwo(5);
+var num3 = multiplyByTwo(10);
 	
 console.log(num1, num2, num3);
